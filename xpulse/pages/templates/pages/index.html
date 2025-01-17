@@ -1,4 +1,6 @@
-{% extends 'pages/base.html' %} {% block title %} Schedule {% endblock %} 
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Schedule {% endblock %}
 {% block section %}
 <section>
   <div class="py-10 px-8 md:px-32">
@@ -97,7 +99,7 @@
                 multiple
               />
               <img
-                src="src/img/upload.png"
+                src="{% static 'icons/upload.png' %}"
                 class="w-14 mx-auto"
                 alt="upload image"
               />
@@ -294,10 +296,9 @@
     </div>
   </div>
 </section>
-{% endblock %}
-
+{% endblock %} 
 {% block script %}
-<script src="src/js/handlefilesupload.js"></script>
-<script src="src/js/checkboxcheck.js"></script>
-<script src="src/js/handlepoststype.js"></script>
+<script src="{% static 'js/handlefilesupload.js' %}"></script>
+<script src="{% static 'js/checkboxcheck.js' %}"></script>
+<script src="{% static 'js/handlepoststype.js' %}"></script>
 {% endblock %}
