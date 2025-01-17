@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Installed Apps
     'accounts',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'xpulse.wsgi.application'
 
 

@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %} Schedule {% endblock %} 
-{% blocksection %}
+{% extends 'pages/base.html' %} {% block title %} Schedule {% endblock %} 
+{% block section %}
 <section>
   <div class="py-10 px-8 md:px-32">
     <div class="header">
@@ -294,7 +294,9 @@
     </div>
   </div>
 </section>
-{% endblock %} {% blockscript %}
+{% endblock %}
+
+{% block script %}
 <script src="src/js/handlefilesupload.js"></script>
 <script src="src/js/checkboxcheck.js"></script>
 <script src="src/js/handlepoststype.js"></script>
