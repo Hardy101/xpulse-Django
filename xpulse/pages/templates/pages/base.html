@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="src/img/logo-alt.png" />
+    <!-- Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <main>
+      <!-- Dropdown for sm devices -->
+      <div
+        id="dropdown"
+        class="hidden dropdown w-full absolute top-16 z-10 animate__animated animate__fadeIn"
+      >
+        <ul class="bg-white bs-1 px-8 pb-2 text-sm poppins-medium">
+          <li class="flex gap-2">
+            <img src="src/img/clock.png" class="w-4 my-auto" alt="clock" />
+            <a href="index.html" class="py-2 my-auto">Schedule</a>
+          </li>
+          <li class="flex gap-2">
+            <img src="src/img/post.png" class="w-4 my-auto" alt="" />
+            <a href="posts.html" class="py-2">Posts</a>
+          </li>
+          <li class="flex gap-2">
+            <img src="src/img/message.png" class="w-4 my-auto" alt="message" />
+            <a href="messages.html" class="py-2">Messages</a>
+          </li>
+          <li class="flex gap-2">
+            <img
+              src="src/img/analytics.png"
+              class="w-4 my-auto"
+              alt="analytics"
+            />
+            <a href="analytics.html" class="py-2">Analytics</a>
+          </li>
+          <li class="flex gap-2">
+            <img
+              src="src/img/notification.png"
+              class="w-4 my-auto"
+              alt="notifications"
+            />
+            <a href="notifications.html" class="py-2">Notifications</a>
+          </li>
+          <hr class="h-0.5 bg-gray-faded" />
+          <li class="flex mt-2">
+            <a href="index.html#createpost" class="flex gap-2 w-full">
+              <img src="src/img/plus.png" class="w-4 my-auto" alt="plus" />
+              <span class="py-2">New Post</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="border-b relative z-10">
+        <div class="px-8 md:px-16 py-4">
+          <!-- Navigation for sm devices -->
+          <ul class="flex justify-between gap-4 md:hidden">
+            <li class="grow my-auto flex">
+              <a href="index.html" class="mr-auto poppins-medium"
+                ><img src="src/img/logo.png" class="w-8"
+              /></a>
+            </li>
+            <button id="dropdownbtn">
+              <img src="src/img/menu.png" class="w-8 my-auto" alt="menu icon" />
+            </button>
+          </ul>
+          <!-- Navigation for lg devices -->
+          <ul class="hidden md:flex gap-4">
+            <li class="grow my-auto flex">
+              <a href="index.html" class="mr-auto poppins-medium"
+                ><img src="src/img/logo.png" class="w-8"
+              /></a>
+            </li>
+            <li class="my-auto">
+              <a href="#" class="text-xs poppins-bold">Schedule</a>
+            </li>
+            <li class="my-auto">
+              <a href="posts.html" class="text-xs poppins-medium">Posts</a>
+            </li>
+            <li class="my-auto">
+              <a href="messages.html" class="text-xs poppins-medium"
+                >Messages</a
+              >
+            </li>
+            <li class="my-auto">
+              <a href="analytics.html" class="text-xs poppins-medium"
+                >Analytics</a
+              >
+            </li>
+            <li class="my-auto">
+              <a href="notifications.html" class="text-xs poppins-medium"
+                >Notifications</a
+              >
+            </li>
+            <li class="my-auto poppins-medium">
+              <a
+                href="#createpost"
+                class="bg-blue-1 text-white px-4 py-1 rounded-2xl text-xs"
+              >
+                New Post
+              </a>
+            </li>
+            <li>
+              <img src="src/img/p-1.jpg" class="w-8 h-8 rounded-full" alt="" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {% block section %}{% endblock %}
+    </main>
+    <script src="src/js/script.js"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>
