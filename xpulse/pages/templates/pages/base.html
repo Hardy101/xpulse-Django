@@ -32,20 +32,32 @@
       >
         <ul class="bg-white bs-1 px-8 pb-2 text-sm poppins-medium">
           <li class="flex gap-2">
-            <img src="src/img/clock.png" class="w-4 my-auto" alt="clock" />
+            <img
+              src="{% static 'icons/clock.png' %}"
+              class="w-4 my-auto"
+              alt="clock"
+            />
             <a href="index.html" class="py-2 my-auto">Schedule</a>
           </li>
           <li class="flex gap-2">
-            <img src="src/img/post.png" class="w-4 my-auto" alt="" />
+            <img
+              src="{% static 'icons/post.png' %}"
+              class="w-4 my-auto"
+              alt=""
+            />
             <a href="posts.html" class="py-2">Posts</a>
           </li>
           <li class="flex gap-2">
-            <img src="src/img/message.png" class="w-4 my-auto" alt="message" />
+            <img
+              src="{% static 'icons/message.png' %}"
+              class="w-4 my-auto"
+              alt="message"
+            />
             <a href="messages.html" class="py-2">Messages</a>
           </li>
           <li class="flex gap-2">
             <img
-              src="src/img/analytics.png"
+              src="{% static 'icons/clock.png' %}"
               class="w-4 my-auto"
               alt="analytics"
             />
@@ -53,7 +65,7 @@
           </li>
           <li class="flex gap-2">
             <img
-              src="src/img/notification.png"
+            src="{% static 'icons/notification.png' %}"
               class="w-4 my-auto"
               alt="notifications"
             />
@@ -74,11 +86,11 @@
           <ul class="flex justify-between gap-4 md:hidden">
             <li class="grow my-auto flex">
               <a href="index.html" class="mr-auto poppins-medium"
-                ><img src="src/img/logo.png" class="w-8"
+                ><img src="{% static 'icons/logo.png' %}" class="w-8"
               /></a>
             </li>
             <button id="dropdownbtn">
-              <img src="src/img/menu.png" class="w-8 my-auto" alt="menu icon" />
+              <img src="{% static 'icons/menu.png' %}" class="w-8 my-auto" alt="menu icon" />
             </button>
           </ul>
           <!-- Navigation for lg devices -->
@@ -126,7 +138,7 @@
 
       {% block section %}{% endblock %}
     </main>
-    <script src="src/js/script.js"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
     {% block script %}{% endblock %}
   </body>
 </html>
