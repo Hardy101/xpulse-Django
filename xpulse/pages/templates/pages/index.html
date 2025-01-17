@@ -134,7 +134,7 @@
                   >Date</span
                 >
                 <img
-                  src="src/img/calendar.png"
+                src="{% static 'icons/calendar.png' %}"
                   class="w-6 my-auto"
                   alt="date image"
                 />
@@ -205,7 +205,7 @@
               type="button"
               class="flex gap-2 bg-blue-1 text-white rounded-2xl px-4 py-1 poppins-bold"
             >
-              <img src="src/img/clock.png" class="w-4 invert" alt="" />
+              <img src="{% static 'icons/clock.png' %}" class="w-4 invert" alt="" />
               Schedule
             </button>
 
@@ -227,13 +227,13 @@
         <ul id="calendarheader" class="grid grid-cols-7 gap-4 poppins-bold">
           <li class="gap-4">
             <button class="bg-[#f5f5f5] p-3 rounded-sm">
-              <img src="src/img/caret.png" class="w-5 rotate-180" alt="" />
+              <img src="{% static 'icons/caret.png' %}" class="w-5 rotate-180" alt="" />
             </button>
           </li>
           <li class="col-span-5 gap-4 text-center">January</li>
           <li class="">
             <button class="bg-[#f5f5f5] p-3 rounded-sm">
-              <img src="src/img/caret.png" class="w-5" alt="" />
+              <img src="{% static 'icons/caret.png' %}" class="w-5" alt="" />
             </button>
           </li>
         </ul>
